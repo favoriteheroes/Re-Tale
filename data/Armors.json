@@ -1,0 +1,7 @@
+[
+null,
+{"id":1,"atypeId":1,"description":"*だれかさんのおもいで","etypeId":5,"traits":[{"code":22,"dataId":5,"value":0.05}],"iconIndex":0,"name":"ハートロケット","note":"個数非表示","params":[0,0,0,0,0,10,0,0],"price":0},
+{"id":2,"atypeId":0,"description":"","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0},
+{"id":3,"atypeId":1,"description":"いつものしましまの服","etypeId":4,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"服","note":"個数非表示","params":[0,0,0,10,0,0,0,0],"price":300},
+{"id":4,"atypeId":0,"description":"","etypeId":2,"traits":[{"code":22,"dataId":1,"value":0}],"iconIndex":0,"name":"","note":"","params":[0,0,0,0,0,0,0,0],"price":0}
+]
