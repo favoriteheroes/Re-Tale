@@ -55,7 +55,7 @@ null,
 {"id":53,"expanded":false,"name":"キャンプの向こう側","order":55,"parentId":52,"scrollX":1638,"scrollY":924},
 {"id":54,"expanded":true,"name":"悪夢3","order":57,"parentId":50,"scrollX":1638,"scrollY":924},
 {"id":55,"expanded":true,"name":"悪夢4","order":58,"parentId":54,"scrollX":1638,"scrollY":924},
-{"id":56,"expanded":false,"name":"砕いて真っ白","order":52,"parentId":45,"scrollX":1638,"scrollY":924},
+{"id":56,"expanded":false,"name":"砕いて真っ白","order":52,"parentId":45,"scrollX":1638,"scrollY":922},
 {"id":57,"expanded":false,"name":"ゲームオーバー画面","order":5,"parentId":27,"scrollX":1638,"scrollY":922},
 {"id":58,"expanded":true,"name":"特殊OP用の映像","order":7,"parentId":10,"scrollX":1638,"scrollY":924}
 ]
