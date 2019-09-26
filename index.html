@@ -5,6 +5,27 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="viewport" content="user-scalable=no">
+        <script>
+  /* ピッチインピッチアウトによる拡大縮小を禁止 */
+  document.documentElement.addEventListener('touchstart', function (e) {
+  if (e.touches.length >= 2) {e.preventDefault();}
+  }, {passive: false});
+  /* ダブルタップによる拡大を禁止 */
+  var t = 0;
+  document.documentElement.addEventListener('touchend', function (e) {
+  var now = new Date().getTime();
+  if ((now - t) < 350){
+    e.preventDefault();
+  }
+  t = now;
+  }, false);
+</script>
+<style>
+  body , input , textarea , select {
+  /* 入力欄にフォーカスが当たっても拡大しない */
+    font-size:17px;
+  }
+</style>
         <link rel="icon" href="icon/icon.png" type="image/png">
         <link rel="apple-touch-icon" href="icon/icon.png">
         <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
