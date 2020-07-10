@@ -1481,12 +1481,8 @@ UndertaleBattleSystem.prototype.refresh = function() {
 			if(!this._enemies[i]) continue;
 
 			if(this._enemies[i].checkCollisionPlayer(p) && p.invincibleTime === 0) {
+				AudioManager.playSe({"name":_.damageSE,"pan":0,"pitch":100,"volume":90});
 				this._action.apply(this._target);
-				if(this._target.hp > 0) {
-					AudioManager.playSe({"name":_.damageSE,"pan":0,"pitch":100,"volume":90});
-				} else {
-					AudioManager.playSe({"name":_.death1Se,"pan":0,"pitch":100,"volume":90});
-				}
 				this._target.refresh();
 				p.setInvincibleTime(this._invincibility);
 			}
@@ -2308,18 +2304,16 @@ Sprite.prototype.insideFrame = function(x, y) {
 };
 
 Undertale_Enemy.prototype.checkCollisionPlayer = function(p) {
-	if(this.destroyAnimation) return false;
 	if(this.type.match(/stop/i) && !p.isMoving()) return false;
 	if(this.type.match(/move/i) && p.isMoving()) return false;
-	if(this.shape === 'pixel') {
-		return this.checkCollisionPixel(p);
-	} else if(p.shape() === 'circle') {
+	if(p.shape() === 'circle') {
 		return this.checkCollisionCircle(p.x, p.y, p.radius());
 	} else if(p.shape() === 'rect') {
 		return this.checkCollisionRect(p.x, p.y, p.getWidth(), p.getHeight());
-	} 
+	}
 	return false;
 };
+
 
 Undertale_Enemy.prototype.playSe = UndertaleBattleSystem.prototype.playSe;
 
