@@ -32,7 +32,7 @@
  */
 
 /*:ja
- * @plugindesc 基本的なパラメーターを設定するプラグインです。
+ * @plugindesc 基本的なパラメーターを設定するプラグインです。iOS14対応追加
  * @author RM CoreScript team
  *
  * @help このプラグインにはプラグインコマンドはありません。
@@ -56,7 +56,7 @@
  * @desc 値が設定された場合、ウインドウの高さを指定した値に変更
  *
  * @param renderingMode
- * @desc レンダリングモード (canvas/webgl/auto)
+ * @desc レンダリングモード (canvas/webgl/auto) autoかつiOS14の場合はcanvasで動作します
  * @default auto
  *
  * @param alwaysDash
@@ -109,6 +109,8 @@
             return 'canvas';
         } else if (renderingMode === 'webgl') {
             return 'webgl';
+        } else if (Utils.isMobileSafari() && navigator.userAgent.indexOf(" 14_") >= 0) {
+            return 'canvas';
         } else {
             return 'auto';
         }
